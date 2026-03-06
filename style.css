@@ -1,0 +1,19 @@
+
+        body{
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #F0F0F0;
+        }
+        div{
+            text-align:center;
+            width:35%;
+            margin:10px;
+            padding:20px 10px;
+            background-color: #FFD1DF;
+            border-radius: 10px;
+        }
+        button{
+            border-radius: 1 solid #FFD1DF;
+        }
+    
