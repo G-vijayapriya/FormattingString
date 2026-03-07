@@ -14,14 +14,24 @@ function mail(){
 }
 
 //username check
-function userName(){
-    let userName=prompt("Enter the name");
-    let input2=document.getElementById("input2").innerText=`Name : ${userName}`;
-    if(!userName.includes(' ') && userName==userName.toLowerCase()){
-        let output2=document.getElementById("output2").innerText=`Valid name`;
+function userName() {
+    let userName = prompt("Enter the name");
+    document.getElementById("input2").innerText = `Name : ${userName}`;
+
+    let valid = true;
+
+    for (let i = 0; i < userName.length; i++) {
+        let ch = userName[i];
+        console.log(ch<'a')
+        if (ch < 'a' || ch > 'z') {
+            valid = false;
+            break;
+        }
     }
-    else{
-        output2=document.getElementById("output2").innerText=`Invalid name`;
+    if (valid && userName !== "") {
+        document.getElementById("output2").innerText = "Valid name";
+    } else {
+        document.getElementById("output2").innerText = "Invalid name";
     }
 }
 
